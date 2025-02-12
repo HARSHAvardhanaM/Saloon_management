@@ -32,6 +32,9 @@ function Register() {
             if(facial){
                 services.Facial = 350
             }
+            if(Object.keys(services).length == 0){
+                throw new Error("Select services")
+            }
             const data = await axios.post("http://localhost:7777/token",{
                 customerName : custName,
                 services : services,
@@ -43,7 +46,9 @@ function Register() {
             console.log(data.data.token._id)
             navigate(`/token/${data.data.token._id}`)
         } catch (error) {
-            console.log(error)
+            if(error.message){
+                setError(error.message)
+            }
             setError(error.response.data.message)
         }
     }
