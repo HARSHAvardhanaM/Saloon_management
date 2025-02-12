@@ -9,7 +9,6 @@ const islogedIn = async (req, res, next) => {
             throw new Error("Invalid token")
         }
         const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
-        console.log(decodedToken)
         if (!decodedToken) {
             throw new Error("Invalid token")
         }

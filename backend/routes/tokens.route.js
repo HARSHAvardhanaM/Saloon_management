@@ -34,7 +34,6 @@ router.post("/token",islogedIn,async(req,res)=>{
 })
 
 router.post("/token/set", async(req,res)=>{
-    console.log(req.cookies.token)
     const tokenNum = parseFloat(req.body.tokenNum);
     token = tokenNum;
     res.status(200).json({message : "Token initialised successfully"})
