@@ -40,7 +40,8 @@ To run both the **frontend** and **backend** locally, follow these steps:
 
 ```bash
 git clone https://github.com/HARSHAvardhanaM/Saloon_management.git
-cd saloon-management
+cd Saloon_management
+```
 
 ### 2. Install Dependencies for Backend
 
@@ -49,4 +50,32 @@ Navigate to the `backend` directory and install the dependencies:
 ```bash
 cd backend
 npm install
+```
+
+### 3. Install Dependencies for Frontend
+
+Navigate to the frontend directory and install the dependencies:
+
+```bash
+cd frontend
+npm install
+```
+
+### 4. Run Backend
+
+Navigate to the backend directory and run:
+
+```bash
+cd backend
+npm run dev
+```
+
+### 5. Install Dependencies for Frontend
+
+Navigate to the frontend directory and run:
+
+```bash
+cd frontend
+npm run dev
+```
 
